@@ -15,7 +15,7 @@ def print_welcome():
 
 
 def print_bye():
-    byes = ['bye bye', 'see you', 'catch you later', 'farewell', 'goodbye']
+    byes = ['bye bye :)', 'see you :)', 'catch you later :)', 'farewell :)', 'goodbye :)']
     print(random.choice(byes))
 
 
@@ -44,6 +44,9 @@ def print_3rd_level_help(availableMatches):
 
 def print_supported_leagues():
     supportedLeagues = fs_utils.get_supported_leagues()
+    print("{0:{0}^60}".format('+'))
+    print("{0:{1}^66}".format('Supported Leagues', ' '))
+    print("{0:{0}^60}".format('+'))
     color = '34'
     for (idx, league) in enumerate(supportedLeagues):
         print("\033[{1}m{0}\033[0m".format('. '.join([str(idx + 1), league]), color))
@@ -67,7 +70,7 @@ def main():
                     c = input(">>>")
                     if c == 'q':
                         break
-                    if re.match(r'^\d\.\w+$', c) is None:
+                    if re.match(r'^\d+\.\w+$', c) is None:
                         continue
                     seq = int(c.split('.')[0])
                     opt = c.split('.')[1]
@@ -91,7 +94,7 @@ def main():
                             c = input(">>>")
                             if c == 'q':
                                 break
-                            if re.match(r'^\d\.\w+$', c) is None:
+                            if re.match(r'^\d+\.\w+$', c) is None:
                                 continue
                             seq = int(c.split('.')[0])
                             opt = c.split('.')[1]
@@ -123,4 +126,8 @@ def main():
 
 
 if __name__ == '__main__':
+    if fs_utils.is_reachable('www.livescores.com') is False:
+        print("network unreachable, please check your internet connection")
+        exit(0)
     main()
+

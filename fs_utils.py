@@ -6,7 +6,6 @@ from fs_constant import LEAGUE_INFOS
 def is_reachable(domain):
     try:
         host = socket.gethostbyname(domain)
-        print(host)
         socket.create_connection((host, 80), 3)
         return True
     except:
