@@ -37,12 +37,22 @@ python fs_main.py
 ### Supported Leagues
 - [England] Premier League
 - [England] Championship
+- [England] League 1
+- [England] League 2
 - [Spain] LaLiga
+- [Spain] LaLiga SmartBank
 - [Italy] Serie A
+- [Italy] Serie B
 - [Germany] Bundesliga
+- [Germany] 2nd Bundesliga
 - [France] Ligue 1
+- [France] Ligue 2
 - [Netherlands] Eredivisie
 - [Portugal] Primeira Liga
+- [Russia] Premier League
 - [China] Super League
+- [Japan] J. League
+- [Australia] Hyundai A-League
+
 
 > Data collected from www.livescores.com
